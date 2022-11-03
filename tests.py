@@ -40,14 +40,7 @@ class MyAppIntegrationTestCase(unittest.TestCase):
     def test_missing_subdirectory(self):
         result = self.client.get('/subfolder/dinner_menu')
         self.assertEqual(result.status_code, 404)
-
-    def test_file_return_content_empty(self):
-        result = self.client.get('/subfolder2/')
-        result_dict = json.loads(result.data)
-        self.assertEqual(result_dict,{})
-
         
-
 
 if __name__ == '__main__':
     unittest.main()
