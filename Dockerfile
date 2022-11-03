@@ -1,9 +1,10 @@
 # Dockerfile, Image, Container
-# FROM python:3.9
+FROM python:3.9
 
-# ADD main.py .
+ADD main.py .
 
-#RUN pip install requirements 
+RUN pip install flask
+RUN mkdir -p /home
 
-# CMD ["python","./main.py"]
+CMD python ./main.py /home
 
