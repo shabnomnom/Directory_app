@@ -42,7 +42,6 @@ def directory_info(directory, page=0):
             "current_page": page,
             "page_size": 5 
         }
-    
 
     for file in list_directory[start_index_directories:end_index]:
         file_info = {}
